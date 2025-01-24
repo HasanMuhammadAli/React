@@ -1,9 +1,9 @@
 import React from "react";
-import UseRefHook from "./useRefHook.jsx";
+import InputFocus from "./useRefHook.jsx";
 
 function App(){
   return(
-    <UseRefHook />
+    <InputFocus />
   );
 }
 export default App;

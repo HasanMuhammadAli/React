@@ -1,16 +1,21 @@
+//This example is just for Accessing DOM
 import React,{useRef} from "react";
-function UseRefHook() {
-    const inputEl = useRef(null);
-    const onButtonClick = () => {
-      // `current` points to the mounted text input element
-      inputEl.current.focus();
-    };
-    return (
-      <>
-        <input ref={inputEl} type="text" />
-        <button onClick={onButtonClick}>Focus the input</button>
-      </>
-    );
-  }
-  
-export default UseRefHook;
+function InputFocus(){
+  //create ref object
+  const inputRef = useRef(null);
+
+  const handleFocus = () =>{
+    //Focus the input element directly
+    inputRef.current.Focus();
+  };
+
+  return(
+    <div>
+      <input ref={inputRef} type="text" placeholder="Focus me with the button"/>
+      <button onClick={handleFocus}>
+        Focus Input
+      </button>
+    </div>
+  );
+}
+export default InputFocus;
